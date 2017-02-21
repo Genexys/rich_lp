@@ -1,0 +1,168 @@
+.main-rich-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1300px;
+  padding: 0 50px;
+  margin: auto;
+  transition: all .7s;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    transition: all .7s;
+    @for $i from 1 through 31 {
+      $colors: #4DB748, #FD9100, #FF4588, #0B1122, #EFA326, #E1C30D, #E8232A, #BF0204, #21177D, #82847D, #670A1C, #C42027, #FF8323, #752467, #EF3698, #ECE167, #F57073, #000, #E4D6B8, #000, #338DC7, #000, #151515, #E00025, #00539A, #000, #3E64A7, #004FA2, #000, #000, #4DB748, #FD9100, #FF4588, #0B1122, #EFA326, #E1C30D, #E8232A, #000, #000, #82847D, #670A1C, #C42027, #000, #000, #EF3698, #000, #F57073, #000, #E4D6B8, #000, #338DC7, #000, #151515, #E00025, #000, #000, #3E64A7, #004FA2, #000, #000;
+      $i: 1;
+      @each $color in $colors {
+      .image-rich-#{$i} {
+        // border-color: $color;
+        a {
+          background-image: url("img/clients-rich/#{$i}.png");
+          background-size: 70%;
+          }
+        }
+        $i: $i + 1;
+      }
+    }
+    .image-rich-10 {
+      a {
+        background-position: 0px -24px;
+      }
+    }
+    .image-rich-16 {
+      a {
+          background-position: -100px 0px;
+          background-size: 173%;
+      }
+    }
+    .image-rich-1 {
+        a {
+          background-size: 104%;
+        }
+      }
+      // .image-rich-14,
+      // .image-rich-29,
+      // .image-rich-30,
+      // .image-rich-35,
+      // .image-rich-36 {
+      //     a {
+      //       background-size: 70%;
+      //     }
+      //   }
+      .image-rich-22 {
+          a {
+            background-size: 67%;
+          }
+        }
+    .image-rich-2,
+    .image-rich-4,
+    .image-rich-7,
+    .image-rich-8,
+    .image-rich-9,
+    .image-rich-10,
+    .image-rich-17,
+    .image-rich-18,
+    .image-rich-23,
+    .image-rich-25,
+    .image-rich-32 {
+      a {
+        background-size: cover;
+      }
+    }
+    .image-rich-31 {
+      background-color: #000;
+    }
+  }
+}
+.image-rich-item {
+  display: inline-block;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 100%;
+  border: 2px solid black;
+  transform: scale(1);
+  transition: all .7s;
+  &:hover {
+    animation: scale 1s ease-in-out;
+  }
+  &:nth-of-type(2n) {
+    margin-left: 10px;
+  }
+  @keyframes scale{
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  a {
+    display: flex;
+    height: 311px;
+    width: 311px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+  }
+}
+.btn-load-reach {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 355px;
+  height: 65px;
+  border: 4px solid #7b9db0;
+  border-radius: 100px;
+  font-size: 30px;
+  font-family: RobotoRegular, sans-serif;
+  color: #7b9db0;
+  cursor: pointer;
+}
+.image-rich-1 {
+  background-color: #44AE3F;
+}
+
+.image-rich-6 {
+  background-size: 70%;
+}
+@media all and (max-width: 1057px) {
+  .main-rich-block {
+    ul {
+      justify-content: space-around;
+    }
+  }
+}
+
+@media all and (max-width: 756px) {
+  .main-rich-block{
+    ul {
+      justify-content: center;
+    }
+  }
+}
+
+
+@media all and (max-width: 370px) {
+  .image-rich-item {
+    margin-top: 30px;
+    a {
+      height: 250px;
+      width: 250px;
+      background-size: 59%;
+    }
+  }
+  .btn-load-reach {
+    width: 300px;
+  }
+}
